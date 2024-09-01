@@ -1,5 +1,5 @@
 --Made by Baconhack_26 on Roblox!
---To Notify Do This notify("Text Here"!)
+--To Notify Do This notify("Text Here!")
 
 local function notify(text)
     local Notification = Instance.new('ScreenGui')
