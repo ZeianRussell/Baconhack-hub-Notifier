@@ -1,0 +1,47 @@
+--Made by Baconhack_26 on Roblox!
+--To Notify Do This notify("Text Here"!)
+
+local function notify(text)
+    local Notification = Instance.new('ScreenGui')
+    Notification.Name = 'Notification'
+    Notification.Parent = game.CoreGui
+
+    local Frame = Instance.new('Frame')
+    Frame.BackgroundColor3 = Color3.new(0, 0, 0)
+    Frame.Position = UDim2.new(0, 150, 0, 0)
+    Frame.Size = UDim2.new(0, 500, 0, 100)
+    Frame.Parent = Notification
+
+    local TextLabel = Instance.new('TextLabel')
+    TextLabel.BackgroundTransparency = 1
+    TextLabel.Position = UDim2.new(0, 20, 0, 20)
+    TextLabel.Size = UDim2.new(0, 460, 0, 60)
+    TextLabel.Text = text
+    TextLabel.TextColor3 = Color3.new(1, 1, 1)
+    TextLabel.TextSize = 24
+    TextLabel.TextStrokeColor3 = Color3.new(1, 0, 0)
+    TextLabel.TextStrokeTransparency = 0.5
+    TextLabel.TextWrapped = true
+    TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+    TextLabel.Parent = Frame
+
+    local uiStroke = Instance.new('UIStroke')
+    uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    uiStroke.Color = Color3.new(1, 0, 0)
+    uiStroke.Thickness = 2
+    uiStroke.Parent = Frame
+
+    local sound = Instance.new('Sound')
+    sound.SoundId = 'rbxassetid://5455280246'
+    sound.Parent = game.SoundService
+    sound:Play()
+    
+    delay(3, function()
+        if sound.IsPlaying then
+            sound:Stop()
+        end
+    end)
+
+    wait(5)
+    Notification:Destroy()
+end
