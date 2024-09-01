@@ -34,7 +34,7 @@ local function notify(text)
     sound.Parent = game.SoundService
     sound:Play()
 
-    game:GetService("Debris"):AddItem(sound, sound.TimeLength + 1)
+    game:GetService("Debris"):AddItem(sound, sound.TimeLength + 7)
 
     wait(5)
     Notification:Destroy()
