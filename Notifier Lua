@@ -1,4 +1,5 @@
 -- Made by Baconhack_26 on Roblox!
+
 local function notify(text)
     local Notification = Instance.new('ScreenGui')
     Notification.Name = 'Notification'
@@ -34,7 +35,7 @@ local function notify(text)
     sound.Parent = game.SoundService
     sound:Play()
     
-    delay(3, function()
+    delay(7, function()
         if sound.IsPlaying then
             sound:Stop()
         end
@@ -42,6 +43,6 @@ local function notify(text)
 
     wait(5)
     Notification:Destroy()
+    
+    return
 end
-
-return notify
