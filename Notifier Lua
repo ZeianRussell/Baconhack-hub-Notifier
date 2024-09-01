@@ -43,6 +43,6 @@ local function notify(text)
 
     wait(5)
     Notification:Destroy()
-    
-    return
 end
+
+return notify
