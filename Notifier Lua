@@ -45,4 +45,4 @@ local function notify(text)
     Notification:Destroy()
 end
 
-return notify
+_G.Notify
